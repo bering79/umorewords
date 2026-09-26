@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Мне сейчас тяжело — выбери ситуацию, которая больше всего похожа на твою, и начни с одного понятного шага.">
+  <title>Мне сейчас тяжело — Не только речь</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="difficult.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Не только речь — на главную"><span>НЕ ТОЛЬКО</span><strong>РЕЧЬ</strong><i aria-hidden="true">〰</i></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Открыть меню</span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Основная навигация">
+      <a class="active" href="difficult.html">Мне тяжело</a>
+      <a href="index.html#understand">Разобраться</a>
+      <a href="index.html#try">Попробовать</a>
+      <a href="index.html#stories">Истории</a>
+      <a href="index.html#parents">Для родителей</a>
+      <a href="index.html#about">О проекте</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="difficult-hero">
+    <div class="container difficult-hero-grid">
+      <div>
+        <p class="eyebrow">МНЕ СЕЙЧАС ТЯЖЕЛО</p>
+        <h1>Не обязательно разбираться во всём сразу.</h1>
+        <p class="hero-lead">Давай начнём с того, что происходит сейчас.</p>
+        <p class="hero-text">Выбери ситуацию, которая больше всего похожа на твою. Можно выбрать несколько. Это не тест и не оценка — просто способ найти подходящую точку входа.</p>
+      </div>
+      <div class="state-note" aria-hidden="true">
+        <span>СЕЙЧАС</span>
+        <strong>не нужно<br>решать всё</strong>
+        <i>〰</i>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" aria-labelledby="situations-title">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ШАГ 1</p>
+          <h2 id="situations-title">Что сейчас происходит?</h2>
+        </div>
+        <p>Выбери то, что больше всего похоже на тебя. Можно выбрать несколько вариантов.</p>
+      </div>
+
+      <div id="difficult-grid" class="difficult-grid">
+        <button class="difficult-card" data-id="fear" type="button">
+          <span class="card-icon">💭</span><strong>Мне страшно говорить</strong><span>Я заранее думаю о том, как прозвучит моя речь.</span>
+        </button>
+        <button class="difficult-card" data-id="presentation" type="button">
+          <span class="card-icon">🎤</span><strong>Мне предстоит выступление</strong><span>Ответ у доски, презентация, доклад или чтение.</span>
+        </button>
+        <button class="difficult-card" data-id="avoidance" type="button">
+          <span class="card-icon">↪</span><strong>Я избегаю некоторых слов</strong><span>Заменяю слова, откладываю разговоры или молчу.</span>
+        </button>
+        <button class="difficult-card" data-id="meeting" type="button">
+          <span class="card-icon">👋</span><strong>Мне трудно знакомиться</strong><span>Новые люди, друзья, разговоры и первое впечатление.</span>
+        </button>
+        <button class="difficult-card" data-id="bullying" type="button">
+          <span class="card-icon">🫶</span><strong>Надо мной смеются</strong><span>Подколы, насмешки или повторяющееся давление.</span>
+        </button>
+        <button class="difficult-card" data-id="alone" type="button">
+          <span class="card-icon">☁️</span><strong>Мне кажется, что я один</strong><span>Хочется понять, есть ли ещё кто-то с похожим опытом.</span>
+        </button>
+        <button class="difficult-card" data-id="future" type="button">
+          <span class="card-icon">🌱</span><strong>Я боюсь за своё будущее</strong><span>Учёба, работа, друзья, отношения, выступления.</span>
+        </button>
+        <button class="difficult-card" data-id="unknown" type="button">
+          <span class="card-icon">?</span><strong>Я не понимаю, что со мной</strong><span>Хочу сначала разобраться без оценок и диагнозов.</span>
+        </button>
+      </div>
+
+      <div id="difficult-action" class="selection-action" hidden>
+        <div><span class="mini-label">ВЫБРАНО</span><strong id="difficult-count">0</strong></div>
+        <button class="btn btn-primary" id="difficult-start" type="button">Посмотреть, с чего начать →</button>
+      </div>
+
+      <div id="difficult-result" class="recommendation" hidden aria-live="polite">
+        <div class="recommendation-copy">
+          <p class="eyebrow">НАЧНЁМ С ОДНОГО</p>
+          <h3 id="result-title"></h3>
+          <p id="result-text"></p>
+        </div>
+        <div class="recommendation-actions">
+          <a id="result-primary" class="btn btn-primary" href="presentation.html">Открыть маршрут →</a>
+          <button id="difficult-again" class="btn btn-secondary" type="button">Выбрать другое</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="before-title">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow">КАК ЭТО РАБОТАЕТ</p><h2 id="before-title">Здесь не нужно сначала «исправить себя».</h2></div>
+        <p>Мы начинаем с конкретной ситуации, потому что именно там обычно и становится понятно, что сейчас мешает.</p>
+      </div>
+      <div class="three-step-grid">
+        <article><span>01</span><h3>Замечаем</h3><p>Что именно происходит: страх, избегание, давление со стороны других или просто непонимание.</p></article>
+        <article><span>02</span><h3>Разбираемся</h3><p>Отделяем саму речь от того, что вокруг неё происходит — мыслей, ожиданий, реакций и опыта.</p></article>
+        <article><span>03</span><h3>Пробуем</h3><p>Выбираем один небольшой шаг, который подходит именно этой ситуации. Не нужно менять всё сразу.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-peach" aria-labelledby="routes-title">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow">БЫСТРЫЕ МАРШРУТЫ</p><h2 id="routes-title">Если узнаёшь себя — можно сразу туда.</h2></div>
+      </div>
+      <div class="route-links">
+        <a href="presentation.html"><span>🎤</span><div><strong>Мне предстоит выступление</strong><small>Короткая подготовка перед ситуацией + точка опоры на случай, если станет трудно.</small></div><b>→</b></a>
+        <a href="#fear-route"><span>💭</span><div><strong>Мне страшно говорить</strong><small>Понять, чего именно ты боишься, и не превращать разговор в экзамен на «идеальную речь».</small></div><b>→</b></a>
+        <a href="#avoidance-route"><span>↪</span><div><strong>Я избегаю слов</strong><small>Сначала заметить свой способ избегания — без требования немедленно его ломать.</small></div><b>→</b></a>
+        <a href="#alone-route"><span>☁️</span><div><strong>Мне кажется, что я один</strong><small>Начать с историй и опыта других людей, а не с упражнения.</small></div><b>→</b></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section help-section">
+    <div class="container help-card">
+      <div><p class="eyebrow">ЕСЛИ СТАЛО ДЕЙСТВИТЕЛЬНО ТЯЖЕЛО</p><h2>Не обязательно справляться со всем одному.</h2><p>Можно поговорить с родителем, другим взрослым, которому доверяешь, школьным психологом или специалистом по заиканию. Если ситуация связана с насмешками или травлей, особенно важно не оставаться с этим один на один.</p></div>
+      <a class="btn btn-primary" href="index.html#parents">Как попросить помощи →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><a class="logo footer-logo" href="index.html"><span>НЕ ТОЛЬКО</span><strong>РЕЧЬ</strong><i>〰</i></a><p>Ты намного больше, чем твоя речь.</p></div>
+    <div class="footer-links"><a href="difficult.html">Мне тяжело</a><a href="index.html#understand">Разобраться</a><a href="index.html#try">Попробовать</a><a href="index.html#stories">Истории</a><a href="index.html#parents">Для родителей</a><a href="index.html#about">О проекте</a></div>
+    <div class="footer-note"><p>Информация на сайте носит образовательный характер и не заменяет индивидуальную консультацию специалиста.</p></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 «Не только речь»</span><span>Источники · Политика конфиденциальности</span></div>
+</footer>
+<script src="difficult.js"></script>
+</body>
+</html>

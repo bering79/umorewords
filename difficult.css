@@ -1,0 +1,33 @@
+.difficult-hero{background:linear-gradient(135deg,var(--lavender-50),#fff);padding:90px 0 82px;overflow:hidden}
+.difficult-hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}
+.difficult-hero h1{font-size:clamp(44px,6vw,70px);line-height:1.04;letter-spacing:-.055em;max-width:800px;margin:0}
+.difficult-hero .hero-lead{font-size:22px;font-weight:800;margin:25px 0 8px}
+.difficult-hero .hero-text{color:var(--muted);max-width:650px}
+.state-note{justify-self:end;width:330px;height:330px;border-radius:50%;background:var(--peach-100);display:flex;flex-direction:column;justify-content:center;padding:65px;transform:rotate(4deg);box-shadow:var(--shadow)}
+.state-note span{font-size:10px;letter-spacing:.15em;font-weight:800;color:var(--muted)}
+.state-note strong{font-size:31px;line-height:1.04;letter-spacing:-.04em;margin-top:12px}
+.state-note i{font-size:38px;color:var(--lavender-700);font-style:normal;margin-top:15px}
+.difficult-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.difficult-card{min-height:190px;text-align:left;padding:23px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;color:var(--ink);display:flex;flex-direction:column;align-items:flex-start;gap:8px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.difficult-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.difficult-card.selected{border-color:var(--lavender-700);background:#fbf9ff;box-shadow:0 0 0 3px rgba(109,90,168,.11)}
+.difficult-card .card-icon{font-size:26px;margin-bottom:auto}
+.difficult-card strong{font-size:15px}
+.difficult-card span:last-child{font-size:12px;color:var(--muted)}
+.three-step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.three-step-grid article{border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px;min-height:245px}
+.three-step-grid article>span{font-size:11px;font-weight:800;color:var(--lavender-700)}
+.three-step-grid h3{font-size:25px;margin:45px 0 10px}
+.three-step-grid p{color:var(--muted);font-size:14px}
+.route-links{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.route-links a{display:grid;grid-template-columns:45px 1fr 24px;gap:14px;align-items:center;padding:21px;border:1px solid var(--line);border-radius:20px;background:#fff}
+.route-links a>span{width:45px;height:45px;display:grid;place-items:center;border-radius:14px;background:var(--lavender-50);font-size:21px}
+.route-links strong{display:block;font-size:15px}
+.route-links small{display:block;color:var(--muted);font-size:12px;margin-top:5px;line-height:1.45}
+.route-links b{color:var(--lavender-700)}
+@media(max-width:1000px){.difficult-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){
+ .difficult-hero{padding:58px 0 65px}.difficult-hero-grid{grid-template-columns:1fr;gap:35px}.state-note{justify-self:start;width:245px;height:245px;padding:50px}
+ .state-note strong{font-size:27px}.difficult-grid,.three-step-grid,.route-links{grid-template-columns:1fr}
+ .difficult-card{min-height:150px}.route-links a{grid-template-columns:42px 1fr 20px}.route-links a>span{width:42px;height:42px}
+}
