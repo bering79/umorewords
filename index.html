@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Не только речь — поддержка и практические материалы для подростков, которые заикаются." />
+  <title>Не только речь</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Не только речь — на главную">
+        <span>НЕ ТОЛЬКО</span>
+        <strong>РЕЧЬ</strong><i aria-hidden="true">〰</i>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Открыть меню</span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Основная навигация">
+        <a href="#difficult">Мне тяжело</a>
+        <a href="#understand">Разобраться</a>
+        <a href="#try">Попробовать</a>
+        <a href="#stories">Истории</a>
+        <a href="#parents">Для родителей</a>
+        <a href="#about">О проекте</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">ПРОСТРАНСТВО БЕЗ ОЦЕНОК</p>
+          <h1>Тебе не обязательно<br><span>говорить идеально.</span></h1>
+          <p class="hero-lead">Заикание — часть твоей речи. Но не вся твоя история.</p>
+          <p class="hero-text">Здесь можно разобраться с заиканием, страхом общения и ситуациями, которые иногда хочется избегать. И найти способы постепенно делать то, что для тебя важно.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#difficult">Мне сейчас тяжело</a>
+            <a class="btn btn-secondary" href="#understand">Хочу разобраться</a>
+          </div>
+          <a class="quiet-link" href="#difficult">Не знаешь, с чего начать? Это нормально →</a>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="blob blob-one"></div>
+          <div class="blob blob-two"></div>
+          <div class="hero-card hero-card-main">
+            <span class="mini-label">ТВОЯ РЕЧЬ</span>
+            <span class="wave">〰〰〰</span>
+            <strong>не вся<br>твоя история</strong>
+          </div>
+          <div class="hero-card hero-card-note">можно говорить<br>по-своему</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="difficult" class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">СНАЧАЛА — ПРО СЕЙЧАС</p>
+            <h2>Что тебя сейчас волнует?</h2>
+          </div>
+          <p>Выбери то, что больше всего похоже на твою ситуацию. Можно выбрать несколько.</p>
+        </div>
+
+        <div id="situation-grid" class="situation-grid">
+          <button class="situation-card" data-id="presentation" type="button">
+            <span class="card-icon">🎤</span><strong>Мне предстоит выступление</strong><span>Презентация, ответ у доски, доклад</span>
+          </button>
+          <button class="situation-card" data-id="phone" type="button">
+            <span class="card-icon">📞</span><strong>Мне страшно звонить</strong><span>Телефон, голосовые, незнакомые люди</span>
+          </button>
+          <button class="situation-card" data-id="school" type="button">
+            <span class="card-icon">🏫</span><strong>Мне трудно в школе</strong><span>Ответы, чтение, разговоры в классе</span>
+          </button>
+          <button class="situation-card" data-id="meeting" type="button">
+            <span class="card-icon">👋</span><strong>Мне трудно знакомиться</strong><span>Новые люди, друзья, общение</span>
+          </button>
+          <button class="situation-card" data-id="bullying" type="button">
+            <span class="card-icon">🫶</span><strong>Надо мной смеются</strong><span>Подколы, насмешки, буллинг</span>
+          </button>
+          <button class="situation-card" data-id="alone" type="button">
+            <span class="card-icon">☁️</span><strong>Мне кажется, что я один</strong><span>Хочется понять, есть ли ещё кто-то</span>
+          </button>
+          <button class="situation-card" data-id="future" type="button">
+            <span class="card-icon">🌱</span><strong>Я думаю о будущем</strong><span>Учёба, работа, отношения, возможности</span>
+          </button>
+          <button class="situation-card" data-id="understand-me" type="button">
+            <span class="card-icon">💭</span><strong>Я не понимаю, что со мной</strong><span>Хочу сначала разобраться</span>
+          </button>
+        </div>
+
+        <div id="situation-action" class="selection-action" hidden>
+          <div>
+            <span class="mini-label">ВЫБРАНО</span>
+            <strong id="selection-count">0</strong>
+          </div>
+          <button class="btn btn-primary" id="start-situation" type="button">Посмотреть, с чего начать →</button>
+        </div>
+
+        <div id="recommendation" class="recommendation" hidden aria-live="polite">
+          <div class="recommendation-copy">
+            <p class="eyebrow">НАЧНЁМ С ОДНОГО</p>
+            <h3 id="recommendation-title"></h3>
+            <p id="recommendation-text"></p>
+          </div>
+          <div class="recommendation-actions">
+            <a id="recommendation-link" class="btn btn-primary" href="#presentation-route">Открыть маршрут →</a>
+            <button id="choose-again" class="btn btn-secondary" type="button">Выбрать другое</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="understand" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ЕСЛИ ХОЧЕТСЯ ПОНЯТЬ</p>
+            <h2>Что со мной происходит?</h2>
+          </div>
+          <p>Без диагнозов и сложных слов. Просто попробуем разобраться в том, что ты замечаешь у себя.</p>
+        </div>
+
+        <div class="article-grid">
+          <a class="article-card" href="#article-stuttering">
+            <span class="article-number">01</span>
+            <h3>Почему я заикаюсь?</h3>
+            <p>Что известно о заикании и почему одного простого объяснения недостаточно.</p>
+            <span class="text-link">Разобраться →</span>
+          </a>
+          <a class="article-card peach" href="#article-anxiety">
+            <span class="article-number">02</span>
+            <h3>Почему я сильнее заикаюсь, когда волнуюсь?</h3>
+            <p>О связи ситуации, внимания, напряжения и речи — без «просто успокойся».</p>
+            <span class="text-link">Разобраться →</span>
+          </a>
+          <a class="article-card lavender" href="#article-avoidance">
+            <span class="article-number">03</span>
+            <h3>Почему я избегаю слов и ситуаций?</h3>
+            <p>Что такое избегание и почему оно может незаметно сузить твою жизнь.</p>
+            <span class="text-link">Разобраться →</span>
+          </a>
+          <a class="article-card green" href="#article-future">
+            <span class="article-number">04</span>
+            <h3>А что будет с моим будущим?</h3>
+            <p>Учёба, работа, друзья и выступления: где могут быть трудности, а где остаются возможности.</p>
+            <span class="text-link">Разобраться →</span>
+          </a>
+        </div>
+        <a class="section-more" href="#understand-all">Посмотреть все материалы →</a>
+      </div>
+    </section>
+
+    <section id="try" class="section section-peach">
+      <div class="container try-grid">
+        <div>
+          <p class="eyebrow">НЕ НУЖНО МЕНЯТЬ ВСЁ</p>
+          <h2>Попробуй один маленький шаг.</h2>
+          <p class="large-text">Иногда полезнее не пытаться сразу стать увереннее, а выбрать одну конкретную ситуацию и посмотреть, что произойдёт.</p>
+          <a class="btn btn-dark" href="#presentation-route">Попробовать →</a>
+        </div>
+        <div class="step-card">
+          <span class="step-label">СЕЙЧАС</span>
+          <h3>Перед разговором</h3>
+          <p>Спроси себя не «Как я буду звучать?», а:</p>
+          <div class="question">«Что я хочу сказать этому человеку?»</div>
+          <button class="text-button" type="button" id="save-step">Сохранить как маленький шаг →</button>
+          <span id="save-message" class="save-message" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ТЫ НЕ ОДИН</p>
+            <h2>Истории, в которых можно узнать себя.</h2>
+          </div>
+          <p>Не истории «успешных людей, которые победили заикание». Обычные люди и разные способы жить со своей речью.</p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <span class="story-tag">ШКОЛА</span>
+            <h3>«Я годами избегал отвечать у доски»</h3>
+            <p>О страхе, который постепенно стал сильнее самой ситуации.</p>
+            <a href="#story-1">Читать историю →</a>
+          </article>
+          <article class="story-card story-card-featured">
+            <span class="story-tag">ДРУЗЬЯ</span>
+            <h3>«В какой-то момент я понял: я всё время думаю о своей речи»</h3>
+            <p>Как меняется жизнь, когда внимание постепенно возвращается к тому, что тебе интересно.</p>
+            <a href="#story-2">Читать историю →</a>
+          </article>
+          <article class="story-card">
+            <span class="story-tag">БУДУЩЕЕ</span>
+            <h3>«Я не знаю, как будет дальше. Но теперь думаю не только об этом»</h3>
+            <p>О том, как не пытаться решить всю жизнь одним ответом.</p>
+            <a href="#story-3">Читать историю →</a>
+          </article>
+        </div>
+        <a class="section-more" href="#all-stories">Все истории →</a>
+      </div>
+    </section>
+
+    <section class="section help-section">
+      <div class="container help-card">
+        <div>
+          <p class="eyebrow">ЕСЛИ СЕЙЧАС ДЕЙСТВИТЕЛЬНО ТЯЖЕЛО</p>
+          <h2>Не обязательно справляться со всем одному.</h2>
+          <p>Можно поговорить с родителем, другим взрослым, которому доверяешь, школьным психологом или специалистом по заиканию.</p>
+        </div>
+        <a class="btn btn-primary" href="#parents">Как попросить помощи →</a>
+      </div>
+    </section>
+
+    <section id="parents" class="section section-soft">
+      <div class="container parents-banner">
+        <div>
+          <p class="eyebrow">РОДИТЕЛЯМ</p>
+          <h2>Если вы ищете информацию для подростка</h2>
+          <p>Здесь — о поддержке, школе, общении и том, чего лучше не делать из лучших побуждений.</p>
+        </div>
+        <a class="btn btn-secondary" href="#parents-page">Для родителей →</a>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">ПОЧЕМУ ПОЯВИЛСЯ ЭТОТ САЙТ</p>
+          <h2>Потому что заикание — это не вся жизнь человека.</h2>
+        </div>
+        <div>
+          <p>Этот проект вырос из личного опыта и желания сделать место, где подростку не предлагают «стать удобнее для окружающих».</p>
+          <p>Здесь можно разобраться в заикании, найти поддержку и постепенно возвращать себе то, что иногда хочется избегать.</p>
+          <a class="text-link" href="#about-page">Узнать о проекте →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="presentation-route" class="route-section" aria-labelledby="route-title">
+      <div class="container route-card">
+        <button class="route-close" type="button" aria-label="Закрыть маршрут">×</button>
+        <div class="route-progress"><span></span></div>
+        <p class="eyebrow">МАРШРУТ · ОКОЛО 2 МИНУТ</p>
+        <div id="route-content"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo footer-logo" href="#top"><span>НЕ ТОЛЬКО</span><strong>РЕЧЬ</strong><i aria-hidden="true">〰</i></a>
+        <p>Ты намного больше, чем твоя речь.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#difficult">Мне тяжело</a>
+        <a href="#understand">Разобраться</a>
+        <a href="#try">Попробовать</a>
+        <a href="#stories">Истории</a>
+        <a href="#parents">Для родителей</a>
+        <a href="#about">О проекте</a>
+      </div>
+      <div class="footer-note">
+        <p>Информация на сайте носит образовательный характер и не заменяет индивидуальную консультацию специалиста.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 «Не только речь»</span>
+      <span>Источники · Политика конфиденциальности</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
